@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'weatherFont';
+    src: url(./rimouski/rimouski\ sb.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'weatherFont';
+  background-color: rgb(11, 11, 54);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    height: auto;
+    background: white;
+    border-radius: 1.5rem;
+    border: 1px solid wheat;
+    .app-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 3rem;
+      font-size: 2em;
+      border-radius: 1.5rem 1.5rem 0 0;
+    }
+    .notification {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 3rem;
+      font-size: 1em;
+      color: red;
+      border: 2px solid red;
+    }
+    .weather-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      height: 28rem;
+      background: rgb(255, 253, 249);
+      border-radius: 0 0 1.5rem 1.5rem;
+
+      .weather-icon {
+        img {
+          width: 100%;
+          height: 10rem;
+        }
+      }
+      .temparature-value {
+        margin: 2px;
+        cursor: pointer;
+       p{
+        font-size: 5em;
+        span{
+            font-size: 50px;
+        }
+       }
+       
+      }
+      .temparature-description {
+        margin: 2px;
+        font-size: 1em;
+        font-weight: 1000;
+      }
+      .location {
+        margin: 2px;
+        font-size: 1.5em;
+      }
+    }
+  }
+}
