@@ -14,12 +14,13 @@ weather.temparature = {
 //App consts and vars
 const KELVIN = 273;
 
-const key = "82005d27a116c2880c8f0fcb866998a0";
+const key = "5dc7b7c1a2a2fbf849f035add8961cf4";
 
 //checking browser support
 
 if('geolocation' in navigator){
     navigator.geolocation.getCurrentPosition(setPosition , showError)
+
 }else{
     notfcaticonElement.style.display ="flex"
     notfcaticonElement.innerHTML = "<P>Browser doesn't Support Geolocation</P>";
@@ -32,6 +33,7 @@ function setPosition(position){
     let longitude = position.coords.longitude;
 
     getWeather(latitude,longitude);
+    console.log(latitude,longitude)
 }
 
 // error when problem with geolocation
